@@ -9,8 +9,8 @@ This plugin will automatically retry inserts on a collision.
 ### Usage
 
 ```javascript
-var mongoose = require('mongoose');
-var ShortId = require('mongoose-shortid');
+var mongoose = require("mongoose");
+var ShortId = require("mongoose-shortid");
 
 var personSchema = mongoose.Schema({
     _id: ShortId,
@@ -51,12 +51,12 @@ var personSchema = mongoose.Schema({
     _id: {
         type: ShortId,
         len: 9,
-        alphabet: 'fubar'
+        alphabet: "fubar"
     }
 });
 ```
 
-The generated IDs will be 9 characters long with only the characters `f` `u` `b` `a` and `r`.
+The generated IDs will be 9 characters long with only the characters `f`, `u`, `b`, `a`, and `r`.
 
 ### Custom ID Generation
 
@@ -69,8 +69,8 @@ The `callback` function expects to be called with `err` and `id` parameters.
 Here's an example:
 
 ```javascript
-var mongoose = require('mongoose');
-var ShortId = require('mongoose-shortid');
+var mongoose = require("mongoose");
+var ShortId = require("mongoose-shortid");
 
 function customIdGenerator(options, callback) {
     var desiredLength = options.len || 7;
@@ -91,9 +91,9 @@ function customIdGenerator(options, callback) {
 var exampleSchema = mongoose.Schema({
     _id: {
         type: ShortId,
-        len:4,
+        len: 4,
         generator: customIdGenerator,
-        generatorOptions: {customOption: 'foo'}
+        generatorOptions: {customOption: "foo"}
     },
     name: String
 });
