@@ -20,11 +20,9 @@ var personSchema = mongoose.Schema({
 // or 
 
 var anotherSchema = mongoose.Schema({
-    alternativeId: { type: ShortId, index: true},
-    name         : String
+    alternativeId: {type: ShortId, index: true},
+    name: String
 });
-
-
 ```
 
 ### Options
@@ -59,7 +57,6 @@ var personSchema = mongoose.Schema({
 ```
 
 The generated IDs will be 9 characters long with only the characters `f` `u` `b` `a` and `r`.
-
 
 ### Custom ID Generation
 
@@ -96,9 +93,8 @@ var exampleSchema = mongoose.Schema({
         type: ShortId,
         len:4,
         generator: customIdGenerator,
-        generatorOptions: { customOption: 'foo' }
+        generatorOptions: {customOption: 'foo'}
     },
     name: String
 });
-
 ```
